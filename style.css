@@ -1,0 +1,477 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    background:
+        linear-gradient(
+            110deg,
+            #4c1d95,
+            #6d28d9,
+            #312e81
+        );
+
+    box-shadow:
+        0 20px 45px rgba(76, 29, 149, 0.18);
+}
+
+
+.badge {
+    display: inline-block;
+
+    background: #fbbf24;
+
+    color: #3b0764;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+}
+
+
+.pill {
+    background: #f3e8ff;
+
+    color: #6b21a8;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+.hide-scrollbar {
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+.product-card {
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    padding: 12px;
+
+    transition: 0.2s;
+
+    overflow: hidden;
+}
+
+
+.product-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+
+.product-img {
+    width: 100%;
+
+    height: 155px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    background: #f8fafc;
+}
+
+
+/* =====================================================
+   STOCK
+===================================================== */
+
+.stock-ok {
+    color: #047857;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.stock-low {
+    color: #b45309;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.stock-out {
+    color: #dc2626;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   CART DRAWER
+===================================================== */
+
+.drawer {
+    transition: transform 0.25s ease;
+}
+
+
+.qty-btn {
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 8px;
+
+    background: #f1f5f9;
+
+    font-weight: 900;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 80;
+
+    background:
+        rgba(15, 23, 42, 0.58);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 16px;
+}
+
+
+.modal.hidden {
+    display: none;
+}
+
+
+.modal-card {
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 24px;
+
+    width: 100%;
+
+    max-height: 92vh;
+
+    overflow: auto;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+
+.checkout-modal {
+    max-width: 900px;
+}
+
+.store-dashboard-modal {
+    max-width: 1200px;
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.float-close {
+    position: absolute;
+
+    right: 16px;
+
+    top: 12px;
+
+    font-size: 28px;
+
+    color: #64748b;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+.label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color: #475569;
+
+    margin: 12px 0 6px;
+}
+
+
+.field {
+    width: 100%;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 12px;
+
+    padding: 11px 12px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.field:focus {
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 0 0 3px #ede9fe;
+}
+
+
+.error {
+    color: #dc2626;
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   PAYMENT OPTIONS
+===================================================== */
+
+.payment-option {
+    display: grid;
+
+    grid-template-columns:
+        auto
+        1fr;
+
+    gap: 10px;
+
+    align-items: center;
+
+    border: 1px solid #e2e8f0;
+
+    padding: 12px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    margin-bottom: 8px;
+}
+
+
+.payment-option:hover {
+    background: #faf5ff;
+
+    border-color: #a78bfa;
+}
+
+
+.payment-option:has(input:checked) {
+    border-color: #7c3aed;
+
+    background: #faf5ff;
+}
+
+
+.payment-option input {
+    width: 18px;
+
+    height: 18px;
+}
+
+
+.payment-option span {
+    display: block;
+
+    font-weight: 800;
+}
+
+
+.payment-option small {
+    display: block;
+
+    color: #64748b;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   PAYMENT FIELDS
+===================================================== */
+
+.payment-fields {
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.step {
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #e2e8f0;
+
+    font-weight: 800;
+}
+
+
+.step.active {
+    background: #7c3aed;
+
+    color: white;
+}
+
+
+.step-line {
+    height: 1px;
+
+    background: #cbd5e1;
+
+    flex: 0 0 50px;
+}
+
+
+/* =====================================================
+   INVENTORY ALERT
+===================================================== */
+
+.alert {
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+.success-icon {
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 38px;
+
+    font-weight: 900;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .checkout-modal {
+        padding: 18px;
+    }
+
+}

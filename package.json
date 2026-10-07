@@ -1,0 +1,13 @@
+{
+  "name": "zepto-local-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Single-store grocery ordering with shared offline inventory",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
